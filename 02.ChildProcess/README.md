@@ -32,7 +32,8 @@ child.fork(modulePath,args,options)
 `fork/`目录下的代码示例说明
 
   fork 是 对 spawn的 封装，实现了 进程间 ipc 通信；在window下，成功 用spawn 模拟 fork
-  （node命令比较easy,在使用coffee命令的时候踩了个坑[见 `fork\parent.js`];主要是对window下cmd的忽视）。
+  （node命令比较easy,在使用coffee命令的时候踩了个坑[见 `fork\parent.js`];
+  主要是对window下cmd的忽视,以及对linux下[shebang](http://zh.wikipedia.org/wiki/Shebang)的无知:( ）。
 
   另外，在coffee命令下(window & linux)，可以fork  `.js`模块 ，也可以fork `.coffee` 模块；[原理](https://github.com/jashkenas/coffeescript/blob/0a82ac7d696e43b88cd47b666f1b3975523b4892/src/register.coffee)
 
