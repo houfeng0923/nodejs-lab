@@ -6,7 +6,7 @@ var child_process = require('child_process');
 
 // window 下 dir　不是可以执行，需要使用　cmd
 // ps: /c 是 执行完关闭命令窗口
-// var cmd_ls = spawn('cmd',['/c','dir']);
+// var cmd_ls = spawn('cmd',['/s','/c','dir']);
 var cmd_ls = child_process.spawn('ls',['-l','/e']);
 
 cmd_ls.stdout.setEncoding('utf8');
@@ -22,6 +22,8 @@ cmd_ls.on('exit',function(code,signal){
 	console.log('spawn exit:',code,signal);
 })
 
+
+// var coffee = child_process.spawn('cmd',['/s','/c','coffee','-p','./fork/mod.coffee'],{stdio:[0,1,2]}); //可以执行coffee
 
 //-----------exec-------------------- 
 // exec 相对灵活，等于一个shell的命令行，管道操作也可以一次完成
@@ -48,8 +50,6 @@ ls.stdout.on('data',function(data){
 // 不同点是 父子进程会建立 IPC 管道 用于通信
 
 var module = child_process.fork('./sub-child');
-// var module = child_process.fork('e:\\nodejs\\test\\sub-child.coffee',{execPath:'C:\\Users\\houfeng.hf\\AppData\\Roaming\\npm\\coffee.cmd'});
-// var module = child_process.fork('./sub-child.js',{execPath:'C:\\Program Files\\nodejs\\node.exe'});
 
 console.log('module.pid:',module.pid);
 

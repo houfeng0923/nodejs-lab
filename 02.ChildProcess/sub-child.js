@@ -9,6 +9,6 @@ process.on('message',function(msg){
 
 
 
- setInterval(function(){
- 	console.log('interval');
- },400)
+ // setInterval(function(){
+ // 	console.log('interval');
+ // },400)

@@ -52,6 +52,7 @@ var jsonBuf = new Buffer(jsonString);
 var json = JSON.stringify(jsonBuf);
 
 console.log(json);
+console.log(jsonBuf.toString());
 
 
 
