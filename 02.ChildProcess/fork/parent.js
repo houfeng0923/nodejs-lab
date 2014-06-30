@@ -9,8 +9,8 @@ var child_process = require('child_process');
 
 // var module = child_process.fork('./child');
 // var module = child_process.spawn('node',['./child'],{stdio:['ipc']}); // linux window ok ;
-// var module = child_process.spawn('cmd',['/c','coffee', './child2.coffee'],{stdio:['ipc']}); // window ok only;
-var module = child_process.spawn('coffee',[ './child2.coffee'],{stdio:['ipc']}); // linux ok only;
+var module = child_process.spawn('cmd',['/c','coffee', './child2.coffee'],{stdio:['ipc']}); // window ok only;
+// var module = child_process.spawn('coffee',[ './child2.coffee'],{stdio:['ipc']}); // linux ok only;
  
 
 console.log('module.pid:',module.pid);
