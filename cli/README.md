@@ -8,7 +8,7 @@
  - shebang : `#! /usr/bin/env coffee` not , `#! /usr/local/bin coffee`
  - package.json (bin)
  - sudo npm install -g
- - 最后把 *.coffee/*.js 的扩展名去掉并修改 pacakge.json bin
+ - 最后把 *.coffee / *.js 的扩展名去掉并修改 pacakge.json `bin` 设置
 
 
 专业 - `commander`
