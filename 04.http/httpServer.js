@@ -1,6 +1,5 @@
 //使用 path fs  http  创建静态web服务器 
 
-
 var http = require('http'),
   path = require('path'),
   fs = require('fs'),
