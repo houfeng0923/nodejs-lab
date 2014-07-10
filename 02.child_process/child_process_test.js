@@ -25,7 +25,7 @@ cmd_ls.on('exit',function(code,signal){
 
 // var coffee = child_process.spawn('cmd',['/s','/c','coffee','-p','./fork/mod.coffee'],{stdio:[0,1,2]}); //可以执行coffee
 
-//-----------exec-------------------- 
+//-----------exec--------------------
 // exec 相对灵活，等于一个shell的命令行，管道操作也可以一次完成
 // ps . 便捷性的代价是，exec执行的时候，options有：maxBuffer 项，
 // 超出 设定长度，就会抛出异常（maxBuffer exceeded),并杀死child
@@ -49,7 +49,7 @@ ls.stdout.on('data',function(data){
 // 类似 child.spawn('node',['./child.js'])
 // 不同点是 父子进程会建立 IPC 管道 用于通信
 
-var module = child_process.fork('./sub-child');
+var module = child_process.fork('./sub_child');
 
 console.log('module.pid:',module.pid);
 
@@ -57,10 +57,10 @@ module.on('message',function(msg){
  	console.log('receive sub process msg:',msg);
  	// module.kill()
  	process.exit()
-}) 
+})
 
 module.on('disconnect',function(){
-	console.log('fork sub-child.js process disconnect.',arguments);
+	console.log('fork sub_child.js process disconnect.',arguments);
 })
 
 module.send('hello sub')

@@ -7,21 +7,21 @@ primary method
 ----
 
 
-child.spawn(cmd,args,options) 
+child.spawn(cmd,args,options)
 
   最基本的方法，其他都是封装此方法
 
 
-child.exec(cmd,options,cb)	
+child.exec(cmd,options,cb)
 
   启动一个shell去执行，相对重量级一点
 
-child.execFile(execFile,args,options,cb) 
+child.execFile(execFile,args,options,cb)
 
   与exec不同，不启动一个shell
 
 
-child.fork(modulePath,args,options) 
+child.fork(modulePath,args,options)
 
   启动一个node 子进程；可通过返回对象 的 `send`(ipc启动情况下有效)方法来发送消息给子进程。
 

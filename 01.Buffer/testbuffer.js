@@ -7,13 +7,13 @@ var lenbuf = new Buffer(4); // 长度为4，值为 0x00 的 buffer
 lenbuf.writeInt32BE(44,0);  // 向buf 起始位置 写入 4Byte长的 int 值 ：44 （字节序为大端：BE，反之 LE)
 
 //将两个buf 存入 临时数组
-array.push(buf);		
+array.push(buf);
 array.push(lenbuf);
 
 
 
 // 通过Buffer.concat 将数组中buf对象集合 合并为一个buf对象
-var result = Buffer.concat(array);  
+var result = Buffer.concat(array);
 
 console.log(result);
 
@@ -47,7 +47,7 @@ console.log(len + " bytes: " + writeBuf.toString('utf8', 0, len));
 console.log('----------toJSON---------------');
 
 var jsonString = '{"city":"杭州"}';
-var jsonBuf = new Buffer(jsonString); 
+var jsonBuf = new Buffer(jsonString);
 
 var json = JSON.stringify(jsonBuf);
 
