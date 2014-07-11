@@ -58,6 +58,7 @@ function getFile (localpath,req,res) {
 
   fs.stat(localpath,function(err,state) {
     if(err){ //not exist
+      console.log(err);
       res.writeHead(404,'Not Found',{'Content-Type':'text/plain'});
       res.end('not found');
       return;
@@ -73,6 +74,9 @@ function getFile (localpath,req,res) {
 
     var lastModified = state.mtime.toUTCString();
     var ifModifiedSince = "If-Modified-Since".toLowerCase();
+
+    // 设置server
+    res.setHeader('Server','Tengine');
 
     //设置最后修改时间
     res.setHeader('Last-Modified',lastModified);
