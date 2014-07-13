@@ -1,0 +1,16 @@
+{
+    "family": "arale",
+    "name": "houfeng",
+    "version": "1.0.0",
+    "keywords": ["widget"],
+    "description": "",
+    "homepage": "",
+    "author": "",
+    "bugs": {
+        "url": ""
+    },
+    "spm": {
+        "output": ["houfeng.js"]
+    },
+    "tests": ["houfeng"]
+}
