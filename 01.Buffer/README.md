@@ -16,7 +16,7 @@ Buffer.concat(array)
 array 是扁平的buffer内容数组，不可以是其他类型数据
 
 Buffer.byteLength(string)
-buf.length 
+buf.length
 
 
 buf.copy(targetBuf,targetStart,sourceStart,sourceEnd)
@@ -45,9 +45,9 @@ buf.readUint32BE()
 
 buf.readInt8(offset)
 buf.readInt16LE()
-buf.readint16BE()
+buf.readInt16BE()
 buf.readInt32LE()
-buf.readint32BE()
+buf.readInt32BE()
 
 
 buf.readFloatLE()
