@@ -35,10 +35,10 @@ console.log(circle.area(101));
 //以文件夹作为模块名
 //第一种方式是在该文件夹中创建 package.json 文件，指定一个 main 模块
 //如果在该目录中没有 package.json 文件，那么 Node 将尝试加载该目录中的 index.js 或 index.node 文件
-var some = require('./some-lib');
+var some = require('./some_lib');
 some.test();
 
-var some2 = require('./some-lib2/some2')
+var some2 = require('./some_lib2/some2')
 some2.test();
 
 //缓存
