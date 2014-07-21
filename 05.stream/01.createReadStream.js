@@ -4,6 +4,21 @@ var path = require('path')
 var oppressor = require('oppressor')
 
 
+
+
+http.createServer(function (req,res){
+  var body = '';
+  req.setEncoding('utf-8');//
+  req.on('data',function (chunk){
+    body+=chunk;
+  });
+  req.on('end',function (){
+    console.log(body);
+  })
+}).listen(9000);
+
+
+
 /*
 http.createServer(function (req,res){
   fs.readFile(path.join(__dirname,'README.md'),function (err,data){

@@ -10,6 +10,7 @@ Buffer 与 string 转换时，需要指定 encode
 支持编码：ascii	 utf8   utf16le(ucs2)  base64	hex
 
 
+
 Buffer.concat(array)
 
 array 是扁平的buffer内容数组，不可以是其他类型数据

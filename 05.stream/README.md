@@ -2,7 +2,9 @@ stream
 ----
 
 
-stream v2.0
+stream2.0 , v0.8 后为内置模块。
+stream3.0 ,v0.11.5内置；对stream1做了兼容。
+
 
 遵循unix 编程哲学
 
@@ -13,23 +15,8 @@ stream v2.0
 特点：自动管理\缓存回压。。
 
 
-stream 种类 : readable, writable,  duplex , transform
-
-
-stream api
-----
-
-readable.pipe(writable): 把Readable streams的数据写入一个Writable , Transform, 或者Duplex stream。
-
-return 参数流。
-如果 readable.pipe(transform) 流，由于参数既可读又可写，所以可以链式pipe调用：
-a.pipe(b).pipe(c)。
-类似于 unix的 管道命令 ： ls -l | wc
-
-
-
-
-readable: flowing mode  no-flowing mode
+stream 类型 : Readable, Writable, Duplex, Transform, Passthrough .
+还有一个老版本的'classic' 类型。[参考](https://github.com/substack/stream-handbook#classic-streams)
 
 
 hack:
@@ -37,24 +24,123 @@ hack:
   stream.push()//push(null)
 
 
-
-
-stream event
-----
-'readable'
-'data'
+#### stream.Readable (接口)
 
 
 
+  readable 模式 : flowing mode  no-flowing mode
 
-了解
+  > When in flowing mode, data is read from the underlying system and provided to your program as fast as possible. In non-flowing mode, you must explicitly call stream.read() to get chunks of data out.
+
+
+
+  ##### api
+
+  .read([n]):
+    >If you pass in a size argument, then it will return that many bytes. If size bytes are not available, then it will return null.
+    If you do not specify a size argument, then it will return all the data in the internal buffer.
+
+    >This method should only be called in non-flowing mode. In flowing-mode, this method is called automatically until the internal buffer is drained.
+
+
+  .setEncoding()
+
+    >process.stdin.setEncoding('utf-8')
+    如果未设置编码，'data'事件返回的可能是字符的一部分(buf),设置编码后，会返回完整字符。
+    设置后：read()方法返回的是string；默认是Buffer
+
+
+  .pipe(writable,{end:true}):
+
+    >把Readable streams的数据写入一个Writable , Transform, 或者Duplex stream。
+    return 参数流。
+    如果 readable.pipe(transform) 流，由于参数既可读又可写，所以可以链式pipe调用：
+    a.pipe(b).pipe(c)。  类似于 unix的 管道命令 ： ls -l | wc
+
+
+  .unpipe(writable)
+
+  .unshift(chunk)
+
+  .resume()
+
+  .pause()
+
+
+
+  ##### stream event
+
+
+   - 'readable'
+
+    >当可读流中有数据可读取时，流会触发'readable' 事件，这样就可以调用.read()方法来读取相关数据，
+    当可读流中没有数据可读取时，.read() 会返回null，这样就可以结束.read() 的调用，等待下一次'readable' 事件的触发。
+    >需要显式调用 read([n])方法来读取数据。
+
+   - 'data'
+    >If you attach a data event listener, then it will switch the stream into flowing mode, and data will be passed to your handler as soon as it is available.
+
+
+   - 'end'
+    >Note that the end event will not fire unless the data is completely consumed
+
+   - 'close'
+
+   - 'error'
+
+#### stream.Writable (接口)
+
+  ##### api
+
+  .write(chunk,[encoding],[cb])
+    当数据被写入缓冲区时，返回false。
+    response.write('hello')
+
+  .end([chunk],[encoding],[cb])
+    response.end('');
+
+
+  ##### event
+
+  'drain'
+  >当缓冲区内容全部写出后，触发 drain
+
+
+  'finish'
+  > when 'end()'　called .
+
+  'pipe'
+
+  'unpipe'
+
+  'error'
+
+
+#### stream.Duplex
+
+
+#### transform stream
+
+
+[what_are_transform_streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html#what_are_transform_streams_)
+
+内置：`zlib` `crypto`
+
+
+
+
+#### 了解
 
  - [streaming http compression response negotiator](https://github.com/substack/oppressor)
  - [Simplified file library.](https://github.com/mikeal/filed)
+ - [through2](http://gitlab.alibaba-inc.com/icbu-node/zeroone/blob/master/exercises/modifying_buffers/exercise.js)
 
 
-reference
-----
+#### reference
 
+ - [stream-handbook](https://github.com/substack/stream-handbook)
  - [stream 使用手册](http://www.open-open.com/lib/view/open1389583594648.html)
  - [node-stream-playground](https://github.com/jeresig/node-stream-playground)
+
+
+ - [nodejs-transform-streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html)

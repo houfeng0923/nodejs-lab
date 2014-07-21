@@ -1,6 +1,6 @@
 console.log 'mod.coffee'
 
-# setInterval () ->
+# setInterval  ->
 #   console.log 'interval'
 # , 500
 
