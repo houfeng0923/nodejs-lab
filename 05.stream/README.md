@@ -19,9 +19,14 @@ stream 类型 : Readable, Writable, Duplex, Transform, Passthrough .
 还有一个老版本的'classic' 类型。[参考](https://github.com/substack/stream-handbook#classic-streams)
 
 
-hack:
-  readable.read(0)
-  stream.push()//push(null)
+#### hack
+  readable.push()//push(null)//push('') : end readable
+
+  stream.read(0) : will not consume any bytes .
+  (在某写情景中，可能需要触发底层可读流机制的刷新，但不真正消费任何数据。在这种情况下，可以调用 stream.read(0)，它总会返回 null)
+
+  objectMode:true
+
 
 
 #### stream.Readable (接口)
@@ -45,7 +50,7 @@ hack:
 
   .setEncoding()
 
-    >process.stdin.setEncoding('utf-8')
+    >process.stdin.setEncoding('utf8')
     如果未设置编码，'data'事件返回的可能是字符的一部分(buf),设置编码后，会返回完整字符。
     设置后：read()方法返回的是string；默认是Buffer
 
@@ -74,8 +79,12 @@ hack:
    - 'readable'
 
     >当可读流中有数据可读取时，流会触发'readable' 事件，这样就可以调用.read()方法来读取相关数据，
-    当可读流中没有数据可读取时，.read() 会返回null，这样就可以结束.read() 的调用，等待下一次'readable' 事件的触发。
+    当可读流中没有数据可读取时，.read() 会返回null，这时可以结束.read() 的调用，等待下一次'readable' 事件的触发。
     >需要显式调用 read([n])方法来读取数据。
+
+    >当内部缓冲区被排空(drained)，一旦有数据可读取时，将再次触发'readable'事件。（！！！！）
+
+    > [04.read(n).js]
 
    - 'data'
     >If you attach a data event listener, then it will switch the stream into flowing mode, and data will be passed to your handler as soon as it is available.
@@ -105,9 +114,10 @@ hack:
   'drain'
   >当缓冲区内容全部写出后，触发 drain
 
+  'end'
 
   'finish'
-  > when 'end()'　called .
+  >When the end() method has been called, and all data has been flushed to the underlying system, this event is emitted.
 
   'pipe'
 
@@ -118,14 +128,28 @@ hack:
 
 #### stream.Duplex
 
+Duplex streams are streams that implement both the Readable and Writable interfaces.
 
-#### transform stream
+
+#### stream.Transform
 
 
 [what_are_transform_streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html#what_are_transform_streams_)
 
 内置：`zlib` `crypto`
 
+
+
+#### implements
+
+Readable    _read
+Writable    _write
+Duplex      _read, _write
+Transform   _transform, _flush
+
+
+_read:
+  this.push([chunk],[encoding]): Note: This function should be called by Readable implementors, NOT by consumers of Readable streams.
 
 
 
@@ -135,6 +159,9 @@ hack:
  - [Simplified file library.](https://github.com/mikeal/filed)
  - [through2](http://gitlab.alibaba-inc.com/icbu-node/zeroone/blob/master/exercises/modifying_buffers/exercise.js)
 
+#### education
+
+ - [stream-adventure](https://github.com/substack/stream-adventure)
 
 #### reference
 
@@ -144,3 +171,4 @@ hack:
 
 
  - [nodejs-transform-streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html)
+

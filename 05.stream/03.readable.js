@@ -19,11 +19,13 @@ var rs = new Readable();
 var len = 0;
 rs._read = function (){
   if(len++<100) rs.push('['+len+']');
-  else rs.push(null);
+  else rs.push('');
 }
 // rs.pipe(process.stdout);
 
-rs.setEncoding('utf-8')
+rs.pause() //--------test read(0)-------------
+
+rs.setEncoding('utf8')
 rs.on('readable',function (){
   console.log('readable');
   var chunk;
@@ -39,4 +41,4 @@ rs.on('end',function (){
   console.log('end');
 })
 
-
+rs.read(0) //---------test read(0)------------

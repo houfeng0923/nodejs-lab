@@ -1,0 +1,5 @@
+Some of the more notable options available in my version of openssl are:
+
+aes-256-cbc - AES 256 bit - cipher block chaining
+bf-ofb - Blowfish - output feedback mode
+cast5-ofb - Cast 5 - output feedback mode
