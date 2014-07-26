@@ -158,6 +158,9 @@ _read:
  - [streaming http compression response negotiator](https://github.com/substack/oppressor)
  - [Simplified file library.](https://github.com/mikeal/filed)
  - [through2](http://gitlab.alibaba-inc.com/icbu-node/zeroone/blob/master/exercises/modifying_buffers/exercise.js)
+ - [split](https://github.com/dominictarr/split)
+ - [concat-stream](https://github.com/maxogden/concat-stream)
+ - [stream-combiner]
 
 #### education
 
@@ -171,4 +174,4 @@ _read:
 
 
  - [nodejs-transform-streams](http://codewinds.com/blog/2013-08-20-nodejs-transform-streams.html)
-
+ - [nodejs-duplex-streams](http://codewinds.com/blog/2013-08-31-nodejs-duplex-streams.html)

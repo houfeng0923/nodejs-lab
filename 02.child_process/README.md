@@ -71,6 +71,10 @@ child.stderr
 child.pid
 
 
+>注意：
+chid.stdout  [readable:true] ; process.stdout [writable:true]
+child.stdout.pipe(process.stdout);
+
 
 reference
 ----

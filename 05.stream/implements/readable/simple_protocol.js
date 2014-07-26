@@ -26,7 +26,7 @@ function SimpleProtocol(source, options) {
   var self = this;
   source.on('end', function() {
     self.push(null);
-    console.log('end');
+    // console.log('end');
   });
 
   // give it a kick whenever the source is readable
