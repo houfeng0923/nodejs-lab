@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "ZIP": "60647" ,"name":"浙江省 杭州市 滨江区 网商路699号 滨江园区" },
+  "geometry": { "type": "Point", "coordinates": [ 120.18652,30.19190 ] } }
+
+]
+}
