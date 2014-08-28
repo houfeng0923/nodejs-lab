@@ -29,3 +29,8 @@ node --harmony_generators  01.hello.js
  - http://www.atatech.org/articles/19439?rnd=1491237003
 
  - http://jlongster.com/A-Study-on-Solving-Callbacks-with-JavaScript-Generators
+
+
+#### 资料
+
+ - http://gitlab.alibaba-inc.com/node/buc-client/tree/master

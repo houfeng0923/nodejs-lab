@@ -159,8 +159,11 @@ _read:
  - [Simplified file library.](https://github.com/mikeal/filed)
  - [through2](http://gitlab.alibaba-inc.com/icbu-node/zeroone/blob/master/exercises/modifying_buffers/exercise.js)
  - [split](https://github.com/dominictarr/split)
+ - [through](https://github.com/dominictarr/through)
+ - [duplex](https://github.com/Raynos/duplexer)
+ - [event stream](https://github.com/dominictarr/event-stream)
  - [concat-stream](https://github.com/maxogden/concat-stream)
- - [stream-combiner]
+ - [stream-combiner](https://github.com/dominictarr/stream-combiner)
 
 #### education
 

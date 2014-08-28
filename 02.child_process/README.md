@@ -28,6 +28,8 @@ child.fork(modulePath,args,options)
   该方法类似 `child.spawn('node',['./child.js'],{stdio:['ipc']})` (only linux sucess!!)。
   详细可参考 [child_process code source](https://github.com/joyent/node/blob/master/lib/child_process.js)
 
+  fork 进程 也是昂贵的；进程拥有独立的v8实例；（>30ms启动时间；>10M 内存）
+
 
 `fork/`目录下的代码示例说明
 
@@ -55,6 +57,12 @@ options 可以设定子进程的环境和执行条件；
 
 kill
 ----
+
+child_process 中 kill 发送信号
+SIGINT -> CTRL + C
+
+http://nodejs.org/api/child_process.html#child_process_child_kill_signal
+
 
 
 child.kill(signal='SIGTERM')

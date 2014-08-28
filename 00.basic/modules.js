@@ -41,6 +41,12 @@ some.test();
 var some2 = require('./some_lib2/some2')
 some2.test();
 
+// 文件扩展名分析： .js -> .node  -> .json
+
+// 模块路径寻址规则：
+console.log(module.paths);
+
+
 //缓存
 //模块在首次被加载后会缓存起来。
 //这意味着每次调用 require('foo') 将得到完全相同的对象，如果它被解析为同一个文件的话。
@@ -51,10 +57,12 @@ console.log(require.resolve('http'));
 console.log(require.resolve('./circle.js'));
 
 
-
 //module:当前模块引用
 console.log(module.exports);
 
 
 
+console.log(process.execPath);
 
+//require 当前模块的模块（父模块）
+console.log(module.parent);
