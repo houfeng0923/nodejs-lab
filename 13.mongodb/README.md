@@ -4,12 +4,12 @@
 设置log和db及自动启动
 ----
 
-  E:/mongodb>
+  D:/mongodb>
   mkdir logs
   mkdir data
 
-  E:/mongodb/bin>
-  mongod --logpath D:/mongodb/logs/mongodb.log --logappend --dbpath D:/mongodb/data/db --directoryperdb --serviceName MongoDB --install
+  D:/mongodb/bin>
+  mongod --install --dbpath D:/mongodb/data  --serviceName MongoDB  --directoryperdb --logpath D:/mongodb/logs/mongodb.log
 
   net start MongoDB
   net stop MongoDB

@@ -40,7 +40,7 @@ Q.allSettled([]) 所有 promise 完成后，return。
 
 
 
-Q.Promise
+Q.Promise()
 ----
 
   return Q.Promise(function (resolve,reject,notify){
@@ -48,9 +48,10 @@ Q.Promise
   })
 
 
-Q.when(promise,function (data){})
+Q.when()
 ----
 
+  Q.when(promise,function (data){})
 
 
 Q.delay(msec)
@@ -66,8 +67,8 @@ promise.then
     promise
       .then(function (data){},function (err){},function (process){})
       .fail(function (err){}) // .catch()  for modern engine
+      .done(function (){})
       .fin(function (){/* release resource */}) // .finally() for modern engine
-      .done(function (){});
 
     // Q.all() -> promise 返回多个值
     Q.all([promise1,promise2])
