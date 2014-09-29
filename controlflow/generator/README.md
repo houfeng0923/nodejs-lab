@@ -5,6 +5,12 @@
 
 node的实现与ES6标准有偏差。
 
+#### 支持情况
+
+ - Chrome 35+ (about://flags中开启)
+ - Firefox 31+ (默认开启)
+ - nodejs harmony
+
 
 node --harmony  01.hello.js
 node --harmony_generators  01.hello.js
