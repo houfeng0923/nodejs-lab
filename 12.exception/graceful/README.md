@@ -1,3 +1,5 @@
+[deprecated]
+
 Graceful exit when uncaughtException emit, base on process.on('uncaughtException').
 
 

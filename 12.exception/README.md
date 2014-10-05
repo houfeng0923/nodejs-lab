@@ -98,7 +98,7 @@ reqDomain.on('error', function () {
 
 用 domain 来捕获大部分异常，并且通过 uncaughtException 避免程序 crash 是目前来说最理想的方案。
 
-
+(补充：node11 支持generator后，可以更优雅的捕获异步异常！)
 
 
 #### reference

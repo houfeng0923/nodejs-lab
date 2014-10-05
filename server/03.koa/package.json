@@ -4,6 +4,7 @@
   "description": "",
   "main": "test.js",
   "dependencies": {
+    "co-body": "^1.0.0",
     "koa": "*"
   },
   "devDependencies": {},
