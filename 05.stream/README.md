@@ -157,7 +157,7 @@ _read:
 
  - [streaming http compression response negotiator](https://github.com/substack/oppressor)
  - [Simplified file library.](https://github.com/mikeal/filed)
- - [through2](http://gitlab.alibaba-inc.com/icbu-node/zeroone/blob/master/exercises/modifying_buffers/exercise.js)
+ - [through2](http://t.cn/R7PAHBR)
  - [through2-map](https://github.com/brycebaril/through2-map)
  - [split](https://github.com/dominictarr/split)
  - [through](https://github.com/dominictarr/through)

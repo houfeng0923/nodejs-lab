@@ -39,4 +39,4 @@ node --harmony_generators  01.hello.js
 
 #### 资料
 
- - http://gitlab.alibaba-inc.com/node/buc-client/tree/master
+ - http://t.cn/R7PL2n6

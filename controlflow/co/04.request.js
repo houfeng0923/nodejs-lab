@@ -8,7 +8,7 @@ var get = thunkify(request.get);
 
 co(function *(){
   var a = yield get('http://www.baidu.com');
-  // var b = yield get('http://www.alibaba.com');
+  // var b = yield get('http://www.google.com');
   // var c = yield get('http://www.qq.com');
   console.log(a[0].statusCode); // console.log(a[1]);
   // console.log(b[0].statusCode);
@@ -18,7 +18,7 @@ co(function *(){
 
 // co(function *(){
 //   var a = get('http://www.baidu.com');
-//   var b = get('http://www.alibaba.com');
+//   var b = get('http://www.google.com');
 //   var c = get('http://www.qq.com');
 //   var res = yield [a, b, c];
 //   console.log(res);

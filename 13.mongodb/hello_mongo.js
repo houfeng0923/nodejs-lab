@@ -7,7 +7,11 @@ db.once('open', function callback () {
   console.log('yay!');
 });
 
-var Cat = mongoose.model('Cat', { name: String });
+var catSchema = mongoose.Schema({
+    name: String
+})
+
+var Cat = mongoose.model('Cat', catSchema);
 
 var kitty = new Cat({ name: 'houfeng' });
 kitty.save(function (err) {

@@ -45,3 +45,4 @@ node.js driver
 ----
  - [Monk]()
  - [mongoose](http://mongoosejs.com/)
+ - [mongoose-auto-increment](https://github.com/codetunnel/mongoose-auto-increment)
