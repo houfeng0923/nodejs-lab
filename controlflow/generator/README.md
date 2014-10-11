@@ -39,4 +39,4 @@ node --harmony_generators  01.hello.js
 
 #### 资料
 
- - http://t.cn/R7PL2n6
+ - http://t.cn/R7PL2n6-

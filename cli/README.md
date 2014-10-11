@@ -43,5 +43,5 @@ FAQ
 reference
 
  -[用Node.js创建命令行工具](http://www.html-js.com/article/2087)
- -[Node.js命令行工具开发](http://t.cn/R7PARZd)
+ -[Node.js命令行工具开发](http://t.cn/R7PARZd-)
  -[Request —— 让 Node.js http请求变得超简单](http://blog.segmentfault.com/younglaker/1190000000385867)
