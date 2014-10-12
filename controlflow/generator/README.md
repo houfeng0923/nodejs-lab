@@ -32,7 +32,7 @@ node --harmony_generators  01.hello.js
 
 #### reference
 
- - http://www.atatech.org/articles/19439?rnd=1491237003
+ - http://t.cn/R7774mR-
 
  - http://jlongster.com/A-Study-on-Solving-Callbacks-with-JavaScript-Generators
 
