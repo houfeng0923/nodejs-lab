@@ -101,6 +101,8 @@ reqDomain.on('error', function () {
 (补充：node11 支持generator后，可以更优雅的捕获异步异常！)
 
 
+(补充：后续domain会废弃，不建议使用！)
+
 #### reference
 
  - [domain doc](http://nodejs.org/api/domain.html#domain_additions_to_error_objects)
