@@ -1,0 +1,6 @@
+<h1>Responsive App</h1>
+
+<p>HI,“{{responsive}}”</p>
+
+<p><a href="/index/test">index/test</a> </p>
+<p><a href="/item/7788">item/7788</a> </p>

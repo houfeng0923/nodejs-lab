@@ -1,0 +1,6 @@
+{{extend ("./layout/default-layout") }}
+
+{{#block ("content") }}
+    {{include ("./page/home-page") }}
+{{/block}}
+

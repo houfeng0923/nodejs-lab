@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+
+commander = require('commander');
+pkg = require('../package.json');
+
+
+commander
+  .version(pkg.version)
+  .usage('[command]')
+  .command('init','init cake framework')
+  .command('component <name>' ,'create component')
+  .command('extension <name>' , 'create extension')
+  .parse(process.argv)
+
+// cmds = (cmd._name for cmd in commander.commands)
+//  || !~cmds.indexOf(commander.args[0])
+
+if(commander.args.length == 0){
+  commander.help()
+}
+

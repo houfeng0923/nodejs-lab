@@ -1,0 +1,21 @@
+{
+    "meta": {
+        "name": "homeData"
+    },
+    "request": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properites": {
+        }
+    },
+    "response": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+            "name": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -76,6 +76,12 @@ promise.then
 
 
 
+Q.nfcall(fun,arg,arg)
+====
+
+  adapting node .
+
+    Q.nfcall(fs,readFile,'t.txt','utf-8')
 
 
 

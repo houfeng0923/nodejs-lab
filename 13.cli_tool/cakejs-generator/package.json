@@ -1,0 +1,26 @@
+{
+  "name": "cakejs-generator",
+  "version": "0.1.0",
+  "description": "cakejs component generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "bin": {
+    "cakejs": "./bin/cakejs"
+  },
+  "dependencies": {
+    "chalk": "~0.4.0",
+    "commander": "^2.2.0",
+    "q": "~1.0.1",
+    "request": "~2.36.0"
+  },
+  "keywords": [
+    "cakejs"
+  ],
+  "author": "houfeng",
+  "license": "ISC"
+}
