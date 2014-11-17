@@ -1,0 +1,11 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "q": "^1.1.1"
+  }
+}

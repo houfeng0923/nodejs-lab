@@ -1,5 +1,0 @@
-<h1>Responsive App</h1>
-
-<p>HI,“{{responsive}}”</p>
-
-<p>ItemID:{{id}}</p>

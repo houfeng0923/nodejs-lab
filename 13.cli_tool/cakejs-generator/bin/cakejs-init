@@ -1,22 +1,184 @@
 #!/usr/bin/env node
 
+/**
+ * Module dependencies.
+ */
+var program = require('../lib/commander');
+var path = require("path");
+var Q = require("q");
+var fs = require('fs-extra');
 
-commander = require('commander');
-pkg = require('../package.json');
+// templates
+var templatePath = path.join(__dirname, '..', 'templates');
 
 
-commander
-  .version(pkg.version)
-  .usage('[command]')
-  .command('init','init cake framework')
-  .command('component <name>' ,'create component')
-  .command('extension <name>' , 'create extension')
-  .parse(process.argv)
 
-// cmds = (cmd._name for cmd in commander.commands)
-//  || !~cmds.indexOf(commander.args[0])
+exec();
 
-if(commander.args.length == 0){
-  commander.help()
+
+function exec() {
+  var targetDir = (program.args||[]).shift() || '.';
+  var appName = path.basename(path.resolve(targetDir));
+
+
+
+  emptyDirectory(targetDir).then(function (isEmpty) {
+    // 空目录允许直接创建应用
+    if (isEmpty) {
+      return createApplicationAt(targetDir, appName, hasOption(program.rawArgs, '-r'));
+    }
+
+    // 非空目录直接覆盖
+    program.confirm('destination is not empty, continue?(yes or no) ', function (ok) {
+      if (ok) {
+        process.stdin.destroy();
+        createApplicationAt(targetDir, appName, hasOption(program.rawArgs, '-r'));
+      } else {
+        abort('aborting');
+      }
+    });
+
+  }, function (err) {
+    console.log(err.message);
+    process.exit(0)
+  });
+
 }
 
+
+/**
+ * Check if the given directory `path` is empty.
+ *
+ * @param {String} path
+ * @param {Function} fn
+ */
+function emptyDirectory(path) {
+  return Q.Promise(function (resolve, reject, notify) {
+
+        if(!fs.existsSync(path)){
+            fs.mkdirsSync(path);
+        }
+
+    fs.readdir(path, function (err, files) {
+      if (err) {
+        reject(err)
+      } else {
+        resolve(!files || !files.length);
+      }
+    });
+  })
+}
+
+
+/**
+ * Check options
+ *
+ * @param args
+ * @param option
+ * @returns {boolean}
+ */
+function hasOption(args, option) {
+  var f = false, k;
+  args.length && args.forEach(function (v) {
+    if (v == option) {
+      f = true;
+      return false;
+    }
+  });
+  return f;
+}
+
+
+/**
+ * Create application at the given directory `path`.
+ *
+ * @param {String} path
+ */
+
+function createApplicationAt(target, appName, isResponsive) {
+  var source = path.join(templatePath, "cakejs");
+
+  process.on('exit', function () {
+    console.log(' init task over');
+  });
+
+  //generator files according samples
+
+  fs.copy(source, target, function (err) {
+    if (err) {
+      return abort(err.message);
+    }
+
+    var files = getFiles(target);
+    if (files.length > 0) {
+      files.forEach(function (file) {
+        console.log('   \x1b[36mcreate\x1b[0m : ' + file);
+      })
+      console.log('   \x1b[36mdone!!\x1b[0m');
+    }
+
+    process.exit(0);
+
+  });
+}
+
+
+function loadTemplate(fpath, name) {
+  return fs.readFileSync(path.join(fpath, name), 'utf-8');
+}
+
+
+/**
+ * echo str > path.
+ *
+ * @param {String} path
+ * @param {String} str
+ */
+function write(path, str, mode, log) {
+  fs.writeFileSync(path, str, { mode: mode || 0666 });
+  if(log!==false){
+    console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+  }
+}
+
+
+/**
+ * Exit with the given `str`.
+ *
+ * @param {String} str
+ */
+
+function abort(str) {
+  console.error(str);
+  process.exit(1);
+}
+
+
+function hasOption(args,option){
+  var f = false,k;
+  args.length && args.forEach(function(v){
+    if(v==option){
+      f=true;
+      return false;
+    }
+  });
+  return f;
+}
+
+
+
+function getFiles(dir,files_){
+  files_ = files_ || [];
+  if (typeof files_ === 'undefined') files_=[];
+  var files = fs.readdirSync(dir);
+  for(var i in files){
+    if (!files.hasOwnProperty(i)) continue;
+    var name = dir+'/'+files[i];
+    if (fs.statSync(name).isDirectory()){
+      getFiles(name,files_);
+    } else {
+      files_.push(name);
+    }
+  }
+  return files_;
+}

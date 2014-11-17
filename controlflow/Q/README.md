@@ -66,9 +66,11 @@ promise.then
 
     promise
       .then(function (data){},function (err){},function (process){})
-      .fail(function (err){}) // .catch()  for modern engine
-      .done(function (){})
-      .fin(function (){/* release resource */}) // .finally() for modern engine
+      //.done(function (){})  // done 返回空
+      // or
+      //.fail(function (err){}) // .catch()  for modern engine
+      //.fin(function (){/* release resource */}) // .finally() for modern engine
+
 
     // Q.all() -> promise 返回多个值
     Q.all([promise1,promise2])
@@ -81,7 +83,7 @@ Q.nfcall(fun,arg,arg)
 
   adapting node .
 
-    Q.nfcall(fs,readFile,'t.txt','utf-8')
+    Q.nfcall(fs.readFile,'t.txt','utf-8')
 
 
 

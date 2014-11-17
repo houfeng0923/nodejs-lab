@@ -15,8 +15,14 @@ catSchema.plugin(autoIncrement.plugin, {
     startAt: 100
 });
 
-var Cat = mongoose.model('Cat', catSchema);
 
+catSchema.virtual('fullname').get(function (){
+  return this.name + '.jd';
+});
+
+catSchema.set('toJSON', { virtuals: true });
+
+var Cat = mongoose.model('Cat', catSchema);
 
 var kitty = new Cat({ name: 'hello kitty' });
 kitty.save(function (err) {
