@@ -11,5 +11,7 @@
 
 ####  reference
 
-https://github.com/cwbuecheler/node-tutorial-for-frontend-devs
 
+ - [generator](https://github.com/expressjs/generator)
+
+ - https://github.com/cwbuecheler/node-tutorial-for-frontend-devs

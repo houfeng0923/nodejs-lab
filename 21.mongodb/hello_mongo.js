@@ -11,6 +11,36 @@ db.once('open', function callback () {
 var catSchema = mongoose.Schema({
     name: String
 })
+/**
+ * Validations
+ */
+
+catSchema.path('name').required(true, 'cate name cannot be blank');
+
+
+/**
+ * Pre-remove hook
+ */
+
+catSchema.pre('remove', function (next) {
+  // remove related data
+  next();
+});
+
+
+// helper methods
+catSchema.methods = {}
+
+// modelService api
+catSchema.statics = {}
+
+
+
+
+
+
+
+
 
 var Cat = mongoose.model('Cat', catSchema);
 var kitty = new Cat({ name: 'houfeng' });
@@ -24,13 +54,16 @@ kitty.save(function (err) {
 Cat.find(function (err,cats){
   if(err) return console.log(err);
   console.log(cats);
-  console.log(cats[0].id); // ok
+  // console.log(cats[0].id); // ok
   // cats.forEach(function (cat){
   //  var c =  new Cat(cat)
   //  console.log(c.id);
   // })
   db.close();
 })
+
+
+
 
 
 /*

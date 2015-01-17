@@ -15,11 +15,15 @@ function *testReturn(ms){
   return data;
 };
 
-co(function *(){
+var c = co(function *(){
   var data = yield testReturn(100);
   console.log(data);
-})();
+})
 
+co(function *(){
+  yield sleep(1000);
+  yield c ;
+})();
 
 
 

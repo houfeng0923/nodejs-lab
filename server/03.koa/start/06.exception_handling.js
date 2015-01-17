@@ -10,6 +10,13 @@ app.use(function* () {
  this.body = 'OK';
 });
 
+app.use(function *(){
+    var err = new Error();
+    err.status = 404;
+    this.body  = yield render('404.html', { errors: err});
+});
+
+
 function errorHandler() {
  return function* (next) {
    // try catch all downstream errors here
@@ -26,5 +33,7 @@ function errorHandler() {
    }
  };
 }
+
+
 
 app.listen(process.argv[2]||80);

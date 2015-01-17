@@ -14,3 +14,6 @@ co(function *(){
   console.log(b);
   console.log(c);
 })()
+
+
+// thunkify 功能：将异步方法的配置和实际执行分离

@@ -66,10 +66,9 @@ promise.then
 
     promise
       .then(function (data){},function (err){},function (process){})
-      //.done(function (){})  // done 返回空
-      // or
       //.fail(function (err){}) // .catch()  for modern engine
       //.fin(function (){/* release resource */}) // .finally() for modern engine
+      //.done(function (){})  // done 返回空 // if the chain ends with you, call done to terminate it.
 
 
     // Q.all() -> promise 返回多个值
