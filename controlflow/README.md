@@ -28,6 +28,11 @@ async
 
   强大
 
+Promise
+----
+
+ - [Q]()
+ - [bluebird](https://github.com/petkaantonov/bluebird/) is better
 
 reference
 ----

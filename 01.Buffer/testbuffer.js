@@ -56,7 +56,7 @@ console.log(jsonBuf.toString());
 
 
 
-
+console.log(new Buffer(['hello','world']));
 
 
 
