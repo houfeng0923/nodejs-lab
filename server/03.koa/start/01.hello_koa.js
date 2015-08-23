@@ -2,6 +2,15 @@ var koa = require('koa');
 
 var app = koa();
 
+ // app.use(cors())
+app.use(function*(next){
+    console.log('cors');
+    this.set('Access-Control-Allow-Origin', '*');
+    this.set('Access-Control-Allow-Headers','X-Requested-With');
+    this.set('Access-Control-Allow-Methods', 'GET');
+    yield next;
+});
+
 
 app.use(function *body(next){
   this.body = 'hello koa';

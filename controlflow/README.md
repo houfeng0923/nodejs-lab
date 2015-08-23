@@ -31,7 +31,7 @@ async
 Promise
 ----
 
- - [Q]()
+ - [Q](depreated)
  - [bluebird](https://github.com/petkaantonov/bluebird/) is better
 
 reference

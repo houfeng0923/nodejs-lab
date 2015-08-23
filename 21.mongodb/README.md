@@ -94,7 +94,8 @@ case
  - 页面中数据依赖mongo数据渲染，可以考虑使用 [express-mongooose](https://github.com/LearnBoost/express-mongoose)
     原理：重写 express render方法，支持 promise。
 
- - Q promise 支持 ： [mongoose-q](https://github.com/iolo/mongoose-q)
+ - Q promise 支持 ： [mongoose-q](https://github.com/iolo/mongoose-q) (deprecated)
+ - generator 结合（https://cnodejs.org/topic/532911255552a20d4102c768）
 
 
  - [分页](https://github.com/edwardhotchkiss/mongoose-paginate)
@@ -127,5 +128,6 @@ tools
 node.js driver
 ----
  - [Monk]()
+ - [mongojs](https://github.com/mafintosh/mongojs)
  - [mongoose](http://mongoosejs.com/)
  - [mongoose-auto-increment](https://github.com/codetunnel/mongoose-auto-increment)

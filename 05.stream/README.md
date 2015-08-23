@@ -157,12 +157,12 @@ _read:
 
  - [streaming http compression response negotiator](https://github.com/substack/oppressor)
  - [Simplified file library.](https://github.com/mikeal/filed)
+ - [event stream](https://github.com/dominictarr/event-stream)
  - [through2](http://t.cn/R7PAHBR-)
  - [through2-map](https://github.com/brycebaril/through2-map)
  - [split](https://github.com/dominictarr/split)
  - [through](https://github.com/dominictarr/through)
  - [duplex](https://github.com/Raynos/duplexer)
- - [event stream](https://github.com/dominictarr/event-stream)
  - [bl](https://github.com/rvagg/bl)
  - [concat-stream](https://github.com/maxogden/concat-stream)
  - [stream-combiner](https://github.com/dominictarr/stream-combiner)

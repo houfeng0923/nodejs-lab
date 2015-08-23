@@ -7,13 +7,6 @@ cluster.setupMaster({
   // silent : true   // whether or not to send output to parent's stdio. (Default=false)
 });
 
-// cluster.fork();
-
-
-for (var i = cores.length - 1; i >= 0; i--) {
-  cluster.fork();
-};
-
 cluster.on("fork", function(worker) {
   console.log("Worker : [ %d ][ Status : Forking ]", worker.process.pid);
 });
@@ -38,3 +31,11 @@ cluster.on("exit", function(worker, code, signal) {
   console.log("Worker : [ %d ][ Status : Exit ][ Signal : %s ][ Code : %s ]", worker.process.pid, signal, code);
   cluster.fork();
 });
+
+
+
+// cluster.fork();
+
+for (var i = cores.length - 1; i >= 0; i--) {
+  cluster.fork();
+};

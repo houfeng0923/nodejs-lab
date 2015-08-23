@@ -63,6 +63,7 @@ console.log(module.exports);
 
 
 console.log(process.execPath);
+console.log(__dirname);
 
 //require 当前模块的模块（父模块）
 console.log(module.parent);
