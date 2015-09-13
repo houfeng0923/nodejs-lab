@@ -1,4 +1,4 @@
-*
+/*
  * Module dependencies.
  */
 var http = require("http");
@@ -125,3 +125,4 @@ module.exports = app;
     });
     return server;
 })();
+*/
