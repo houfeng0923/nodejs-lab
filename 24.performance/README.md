@@ -47,3 +47,4 @@ references
 
  - [v8垃圾回收机制](http://segmentfault.com/a/1190000000440270)
  - [如何自己检查NodeJS的代码是否存在内存泄漏](http://www.w3ctech.com/topic/842)
+ - [Debugging Memory Leaks in Node.js Applications](http://dudu.zhihu.com/story/7181000)

@@ -38,7 +38,6 @@ stream 类型 : Readable, Writable, Duplex, Transform, Passthrough .
   > When in flowing mode, data is read from the underlying system and provided to your program as fast as possible. In non-flowing mode, you must explicitly call stream.read() to get chunks of data out.
 
 
-
   ##### api
 
   .read([n]):
@@ -114,10 +113,10 @@ stream 类型 : Readable, Writable, Duplex, Transform, Passthrough .
   'drain'
   >当缓冲区内容全部写出后，触发 drain
 
-  'end'
 
   'finish'
-  >When the end() method has been called, and all data has been flushed to the underlying system, this event is emitted.
+  >When the `end() method` has been called, and all data has been flushed to the underlying system, this event is emitted.
+  [finish ? end?](http://stackoverflow.com/questions/28334610/whats-the-difference-between-end-and-finish-events-in-node-streams)
 
   'pipe'
 
@@ -157,7 +156,8 @@ _read:
 
  - [streaming http compression response negotiator](https://github.com/substack/oppressor)
  - [Simplified file library.](https://github.com/mikeal/filed)
- - [event stream](https://github.com/dominictarr/event-stream)
+ - [event stream!](https://github.com/dominictarr/event-stream)
+ - [pump(handle errors and properly close streams.)](https://github.com/mafintosh/pump)
  - [through2](http://t.cn/R7PAHBR-)
  - [through2-map](https://github.com/brycebaril/through2-map)
  - [split](https://github.com/dominictarr/split)
