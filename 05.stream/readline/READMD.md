@@ -1,0 +1,24 @@
+
+Readline是Node.js里实现标准输入输出的封装好的模块，通过这个模块我们可以以逐行的方式读取数据流。
+
+
+
+###event
+
+#### close
+
+Emitted whenever the in stream receives a ^C(SIGINT) or ^D(EOT)
+
+so， ^C(SIGINT) or ^D(EOT) or rl.close() will trigger 'close' event.
+
+## sync
+
+ -[readline-sync](https://github.com/anseki/readline-sync)
+
+ great prompt 方案!
+
+## references
+
+ - [行读取模块readline](http://itbilu.com/nodejs/core/41CUGeaP.html)
+ - [基础使用](http://blog.csdn.net/zgljl2012/article/details/48321171)
+ - [实现跨系统的关闭进程](http://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js)
