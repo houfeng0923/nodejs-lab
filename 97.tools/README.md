@@ -2,6 +2,14 @@
 
 ### modules
 
+### console
+
+ - colors
+ - xcolor
+ - chalk
+ - log-symbols
+
+ - text-table
 
 #### shell
 
@@ -12,11 +20,12 @@
 
 #### parse/read json like file
 
- - https://github.com/sindresorhus/strip-json-comments
+ - [strip-json-comments](https://github.com/sindresorhus/strip-json-comments)
 
 
 #### prompt / sync-prompt
 
+ - prompt + optimist
 
 ### services
 
