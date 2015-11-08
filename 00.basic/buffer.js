@@ -1,5 +1,4 @@
  
-
 var buf = new Buffer(2);
 console.log(buf);
 buf = new Buffer([1,2]);
