@@ -6,10 +6,13 @@
 
  - colors
  - xcolor
+ - colorful
  - chalk
  - log-symbols
 
  - text-table
+
+ - cli-table
 
 #### shell
 

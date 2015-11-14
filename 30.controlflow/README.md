@@ -33,6 +33,7 @@ Promise
 
  - [Q](depreated)
  - [bluebird](https://github.com/petkaantonov/bluebird/) is better
+ - [ES6 Promise]
 
 reference
 ----

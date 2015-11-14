@@ -22,3 +22,4 @@ so， ^C(SIGINT) or ^D(EOT) or rl.close() will trigger 'close' event.
  - [行读取模块readline](http://itbilu.com/nodejs/core/41CUGeaP.html)
  - [基础使用](http://blog.csdn.net/zgljl2012/article/details/48321171)
  - [实现跨系统的关闭进程](http://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js)
+ - [Readline output to file Node.js](http://stackoverflow.com/questions/29410404/readline-output-to-file-node-js)

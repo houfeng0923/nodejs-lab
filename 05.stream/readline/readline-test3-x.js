@@ -7,8 +7,8 @@ var rl = readline.createInterface({
 });
 
 rl.on('line', function(line){
-
     console.log('xxxx:',line);
+    process.exit(0);
 });
 
-rl.write('hello\n')
+rl.write('hello\n');

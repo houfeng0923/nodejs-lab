@@ -11,7 +11,7 @@ function* gen1(){
 function* gen(){
   yield* gen1();
   yield 'over';
-  // yield* [1,2,3] //暂时不支持
+  // yield* [1,2,3] //暂时不支持 //2015年11月11日 ok了
 }
 
 // console.log(gen().next()); // { value:"hello", done:false }
