@@ -2,6 +2,14 @@
 
 ### modules
 
+### dev/debug tool
+
+- [devtool](https://github.com/Jam3/devtool)
+
+### globals
+
+ - autod : 扫描代码，汇总dependencies
+
 ### console
 
  - colors
@@ -29,6 +37,8 @@
 #### prompt / sync-prompt
 
  - prompt + optimist
+
+ - [Inquirer](https://github.com/SBoudrias/Inquirer.js)
 
 ### services
 

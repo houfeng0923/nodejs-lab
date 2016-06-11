@@ -175,6 +175,7 @@ _read:
 
  - [stream-handbook](https://github.com/substack/stream-handbook)
  - [stream 使用手册](http://www.open-open.com/lib/view/open1389583594648.html)
+ - [通通连起来——无处不在的流](http://taobaofed.org/blog/2016/01/28/nodejs-stream/)
  - [node-stream-playground](https://github.com/jeresig/node-stream-playground)
 
 

@@ -5,7 +5,8 @@ node v4.0  'repl' 'readline' or 'readline-sync' 模块 ？
 
 
 
-
+ - [prompt]()
+ - [Inquirer](https://github.com/SBoudrias/Inquirer.js)
 
  - [minimist](https://github.com/substack/minimist)
  - [js-cli](https://github.com/js-cli)
