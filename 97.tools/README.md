@@ -17,10 +17,11 @@
  - colorful
  - chalk
  - log-symbols
-
  - text-table
-
  - cli-table
+
+ - [blessed](https://github.com/chjj/blessed)
+ - [blessed-contrib](https://github.com/yaronn/blessed-contrib)
 
 #### shell
 
@@ -52,3 +53,7 @@ if(!s) { s = 48; }
 return '<img src="http://www.gravatar.com/avatar/'+emailMD5+'?s='+s+'" class="gravatar"/>';
 ```
 
+### fs  watch 
+
+- watchman 
+- Chokidar

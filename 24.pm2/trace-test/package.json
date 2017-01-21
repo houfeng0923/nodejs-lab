@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@risingstack/trace": "^2.36.0",
+    "koa": "^1.2.4"
+  }
+}
