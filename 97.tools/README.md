@@ -4,7 +4,18 @@
 
 ### dev/debug tool
 
-- [devtool](https://github.com/Jam3/devtool)
+- [devtool 废弃](https://github.com/Jam3/devtool)
+
+```
+node --inspect --inspect-brk app.js
+// --inspect-brk : break on start
+
+
+open chrome://inspect
+
+```
+
+
 
 ### globals
 
@@ -34,6 +45,10 @@
 
  - [strip-json-comments](https://github.com/sindresorhus/strip-json-comments)
 
+#### env config
+
+- [motdotla/dotenv](https://github.com/motdotla/dotenv)
+  包含一篇介绍代码和配置分离的观点的文章: [The Twelve-Factor App （简体中文）](https://12factor.net/zh_cn/config)
 
 #### prompt / sync-prompt
 
@@ -53,7 +68,18 @@ if(!s) { s = 48; }
 return '<img src="http://www.gravatar.com/avatar/'+emailMD5+'?s='+s+'" class="gravatar"/>';
 ```
 
-### fs  watch 
+### fs  watch
 
-- watchman 
-- Chokidar
+- Chokidar!
+- [watchman](https://facebook.github.io/watchman/)
+
+
+### screenshot
+
+- webshot
+
+
+### log
+
+- [Bunyan]()
+- [pinojs/pino](https://github.com/pinojs/pino#benchmarks)
