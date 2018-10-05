@@ -83,3 +83,11 @@ return '<img src="http://www.gravatar.com/avatar/'+emailMD5+'?s='+s+'" class="gr
 
 - [Bunyan]()
 - [pinojs/pino](https://github.com/pinojs/pino#benchmarks)
+
+
+### uuid generator
+
+- node-uuid
+- nanoid
+
+- [generator of random: chancejs](https://chancejs.com/)

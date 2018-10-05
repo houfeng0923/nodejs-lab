@@ -18,7 +18,9 @@
 ----
 
  - 命令行工具开发库 [commander](https://github.com/visionmedia/commander.js)
+ - [substack/node-optimist](https://github.com/substack/node-optimist)
  - 控制台打印多彩字体库 [chalk](https://github.com/sindresorhus/chalk)
+
 
 
 other

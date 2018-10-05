@@ -34,6 +34,7 @@ Promise
  - [Q](depreated)
  - [bluebird](https://github.com/petkaantonov/bluebird/) is better
  - [ES6 Promise]
+ - [matthew-andrews/denodeify](https://github.com/matthew-andrews/denodeify)
 
 reference
 ----

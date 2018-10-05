@@ -14,7 +14,10 @@
  - [generate ast](http://esprima.org/demo/parse.html)
  - [ast traversal](https://github.com/estools/estraverse)
  - [acorn](https://github.com/acornjs)
+ - [esprima](https://github.com/jquery/esprima)
 
+> Esprima: “Esprima is a high performance, standard-compliant ECMAScript parser written in ECMAScript (also popularly known as JavaScript).”
+> Escodegen: “Escodegen (escodegen) is an ECMAScript (also popularly known as JavaScript) code generator from Mozilla’s Parser API AST”
 
 ### 应用
 
