@@ -173,6 +173,7 @@ _read:
 
 #### reference
 
+ - [[译] 你所需要知道的关于 Node.js Streams 的一切 · 语雀](https://www.yuque.com/afx/blog/node-js-streams-everything-you-need-to-know)
  - [stream-handbook](https://github.com/substack/stream-handbook)
  - [stream 使用手册](http://www.open-open.com/lib/view/open1389583594648.html)
  - [通通连起来——无处不在的流](http://taobaofed.org/blog/2016/01/28/nodejs-stream/)

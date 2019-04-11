@@ -48,3 +48,6 @@ references
  - [v8垃圾回收机制](http://segmentfault.com/a/1190000000440270)
  - [如何自己检查NodeJS的代码是否存在内存泄漏](http://www.w3ctech.com/topic/842)
  - [Debugging Memory Leaks in Node.js Applications](http://dudu.zhihu.com/story/7181000)
+
+ - [Keeping Node.js Fast: Tools, Techniques, And Tips For Making High-Performance Node.js Servers](https://www.smashingmagazine.com/2018/06/nodejs-tools-techniques-performance-servers/)
+ - [The Ultimate Guide to Performance Monitoring in Node.js](https://cdn.nlark.com/yuque/0/2018/pdf/84137/1532019646540-c93c6be5-e24c-46d8-94cc-35d221680baf.pdf?OSSAccessKeyId=LTAI1M4etAl6H5AN&Expires=1539091882&Signature=SXEQpxQyfQdLfjjYsWAfZjJAyVc%3D)

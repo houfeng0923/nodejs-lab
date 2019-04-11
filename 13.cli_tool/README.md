@@ -28,3 +28,10 @@ vinyl-ftp : ftp上传下载
 harp : 具有内置预处理功能的静态Web服务器
 
 browser-sync : 省时的浏览器同步测试工具
+
+[update-notifier](https://github.com/yeoman/update-notifier)
+
+
+### use
+
+- [jsize](https://github.com/antonmedv/jsize)
