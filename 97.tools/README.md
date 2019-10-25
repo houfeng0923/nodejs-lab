@@ -91,3 +91,10 @@ return '<img src="http://www.gravatar.com/avatar/'+emailMD5+'?s='+s+'" class="gr
 - nanoid
 
 - [generator of random: chancejs](https://chancejs.com/)
+
+
+
+## refs
+
+
+- [挑选npm模块很费事？掌握这些技巧就能事半功倍！ - InfoQ](https://www.infoq.cn/article/FzmL_IDSGe7iRy7QwzWP?utm_source=rss&utm_medium=article)
