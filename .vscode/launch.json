@@ -3,11 +3,27 @@
 	// List of configurations. Add new configurations or edit existing ones.
 	// ONLY "node" and "mono" are supported, change "type" to switch.
 	"configurations": [
+	{
+    "type": "node",
+    "request": "attach",
+    "name": "Attach by Process ID",
+    "processId": "${command:PickProcess}",
+    "skipFiles": [
+      "<node_internals>/**"
+    ]
+  },
+
     {
       "type": "node",
       "request": "launch",
       "name": "Launch Proxy",
       "program": "${workspaceFolder}/04.www/http/proxy/http-proxy-middleware.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Proxy test",
+      "program": "${workspaceFolder}/04.www/http/proxy/tests/ECONNRESET-test/express.js"
     },
     {
       "type": "node",

@@ -35,3 +35,5 @@ browser-sync : 省时的浏览器同步测试工具
 ### use
 
 - [jsize](https://github.com/antonmedv/jsize)
+
+- [【第1867期】Node.js CLI 工具最佳实践](https://mp.weixin.qq.com/s/DwDw0vShAqegXCoAVpZPJQ)

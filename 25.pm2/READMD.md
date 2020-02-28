@@ -71,4 +71,5 @@ pm2 start --node-args="--harmony" index.js   --name "webhook"
  - [ebook](http://wohugb.gitbooks.io/pm2/content/quick-start/install.html)
  - [usage](https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md)
  - [美团酒店Node全栈开发实践](http://tech.meituan.com/node-fullstack-development-practice.html)
+ - [如何监控 Node 服务的内存](https://mp.weixin.qq.com/s/8X-j1VB3OEwzwopNJnLeyQ)
 

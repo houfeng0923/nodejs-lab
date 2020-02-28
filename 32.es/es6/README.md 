@@ -4,6 +4,36 @@
 
 
 
+nodejs 加载  ts/es2015 模块加载
+
+```
+  if (modulepath.match(/\.ts$/)) {
+    try {
+      require.resolve('ts-node');
+    } catch (e) {
+      throw new Error(`Cannot find module 'ts-node', please install`);
+    }
+
+    try {
+      require.resolve('typescript');
+    } catch (e) {
+      throw new Error(`Cannot find module 'typescript', please install`);
+    }
+
+    // Register ts-node typescript compiler
+    require('ts-node').register(); // eslint-disable-line node/no-unpublished-require
+
+    // Load file via ts-node
+    loaded = require(modulepath);
+  } else {
+    // Load file via esm shim
+const esmRequire = require('esm')(module);
+    loaded = esmRequire(modulepath);
+   // or  use babel : https://github.com/babel/babel/issues/8321#issuecomment-404976880
+  }
+
+```
+
 
  - [es6 in depth](http://www.infoq.com/cn/es6-in-depth/)
  - [es6 book](https://wohugb.gitbooks.io/ecmascript-6/content/docs/promise.html)

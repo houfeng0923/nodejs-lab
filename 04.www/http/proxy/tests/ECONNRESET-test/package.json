@@ -1,0 +1,19 @@
+{
+  "name": "ECONNRESET-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "1.16.2",
+    "http-proxy-middleware": "^1.0.3",
+    "request": "^2.88.2",
+    "ws": "^7.3.0"
+  }
+}
